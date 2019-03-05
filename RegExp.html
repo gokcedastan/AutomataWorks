@@ -38,7 +38,7 @@ Input <input type=text id=inp onKeyUp="checkRE()">
 const ptrn = ["[a-z]", "[0-9]{4}", "d[iuü][km]", "x[a-z]","[A-z]+[0-9]{1,}","t[a-z]+t"];
 const word = 
     ["Bir iki üç dört beş altı ", "Bugün 23/6/2018 saat 14",
-     "Geldim gördüm buldum...", "Excellent expression tax ","Drop5552 of ink may make a million34 4think","This is a test of the JavaScript RegExp object"];
+     "Geldim gördüm buldum...", "Excellent expression tax ","Drop5552 of ink may 5make a million34 4think","This is a test of the JavaScript RegExp object"];
 function setValues() {
     pat.value = ptrn[menu.selectedIndex];
     inp.value = word[menu.selectedIndex];
