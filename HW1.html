@@ -58,7 +58,8 @@
                var textInput = inp.value.replace(regEx2, arr);
 		        textInput = textInput.replace(regEx, str);
 		
-		      out.innerHTML = textInput;
+		      out.innerHTML =textInput.replace(regEx, str).split("\n").join("<br>");
+    }
                 
             }
         }
