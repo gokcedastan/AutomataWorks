@@ -56,8 +56,7 @@
                 const regEx2= new RegExp(patternArray,'g');
                 let arr= "<span class=foundArr>$&</span>";
                var textInput = inp.value.replace(regEx2, arr);
-		        textInput = textInput.replace(regEx, str);
-		
+		    
 		      out.innerHTML =textInput.replace(regEx, str).split("\n").join("<br>");
     }
                 
