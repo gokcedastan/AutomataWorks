@@ -1,71 +1,76 @@
-  
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>RegExp-- HW1 </title>
-    <style>
-   /*  pre { border: solid 1px } */
-        #pat {
-            width: 200px;
-        }
-
-        #inp {
-            width: 250px;
-        }
-
-        .foundArr{
-            color: #F60 !important;
-        }
-        .foundStr{
-            color:blue;
-        }
-    </style>
+    <h2 id="title" style="
+    margin-left: 100px;
+">HW1 -- REgExp</h2>
+  <style>
+  /* pre { border: solid 1px } */
+    #pat { width: 90px; }
+    #inp { width: 250px; }
+    .foundstr { color: #0000ff ; }
+    .foundarr { color: 	#FF0000; }
+    span span[class=found] {color: #FF0000;}   
+  </style>
+    
+    
 </head>
 
+    
 <body>
-    <h2 id=title></h2>
-    <p>
-        <br><textarea rows='10' id=inp onKeyUp="checkRE()">
-        let longString = "This is a very long string which needs " +
-		"to wrap across multiple lines because " +
-		"otherwise my code is unreadable.";
-		
-		var vegetables = ['Cabbage', 'Turnip', 'Radish', 'Carrot'];
-		var fruits = ["Apple", "Banana", "Orange"];
-		var years = [1950, 1960, 1970, 1980, 1990, 2000, 2010];</textarea>
-    </p>
-    <p id=out></p>
+<h2 id=title></h2>
 
-    <hr />
-    <b>Sample code</b>
-    <pre id=sample></pre>
-    <hr />
 
-    <script>
-        "use strict";
-        function checkRE() {
-            
-               let patternString='"(.*?)"';
-                let patternArray="\\[.*?]";
-            if (inp.value!="") {
-                const regEx= new RegExp(patternString, 'g');
-                let str = "<span class=foundStr>$&</span>";
-                const regEx2= new RegExp(patternArray,'g');
-                let arr= "<span class=foundArr>$&</span>";
-               var textInput = inp.value.replace(regEx2, arr);
-		    
-		      out.innerHTML =textInput.replace(regEx, str).split("\n").join("<br>");
-    }
-                
-            }
+ <textarea type="text" id="inp" style="width:500px;height:250px;margin-left: 40px;" onkeyup="checkRE()"></textarea>
+    
+<p id=out style="width: 570px;" ></p>
+
+
+<b>Sample code</b>
+<pre id=sample style="width: 570px;"></pre>
+
+
+<script>
+"use strict";
+
+    
+function text() { 
+    
+    let longString = "This is a very long string which needs " +
+    "to wrap across multiple lines because " +
+    "otherwise my code is unreadable.";
+    
+    var vegetables = ['Cabbage', 'Turnip', 'Radish', 'Carrot'];
+    var fruits = ["Apple", "Banana", "Orange"];
+    var years = [1950, 1960, 1970, 1980, 1990, 2000, 2010];
+}
+    
+function setValues() {
+    inp.value =  text.toString();
+    checkRE();
+}
+function checkRE() {
+    const p1='"(.*?)"';
+    const p2="\\[.*?]";
+    var textInput="";
+    if (inp.value) {
+        const regEx = new RegExp(p1,'g');
+        const str = "<span class=foundstr>$&</span>";
+        const regEx2 = new RegExp(p2,'g');
+        const array = "<span class=foundarr>$&</span>";
+        textInput = inp.value.replace(regEx2, array);
         
-        sample.innerText = checkRE.toString();
-        title.innerText = document.title; checkRE();
-    </script>
+        out.innerHTML = textInput.replace(regEx, str).split("\n").join("<br>");
+    }
+}
+    sample.innerText = setValues.toString()+"\n"+checkRE.toString();
+    title.innerText = document.title; setValues();
+</script>
+
+        
+ <a href="https://github.com/gokcedastan/AutomataWorks">Github</a>
 
 </body>
-
 </html>
