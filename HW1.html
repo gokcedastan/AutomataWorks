@@ -49,7 +49,7 @@
         function checkRE() {
             
                let patternString='"(.*?)"';
-                let patternArray= "\\[.*\\]";
+                let patternArray="\\[.*?]";
             if (inp.value!="") {
                 const regEx= new RegExp(patternString, 'g');
                 let str = "<span class=foundStr>$&</span>";
