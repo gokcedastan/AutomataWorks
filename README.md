@@ -3,4 +3,6 @@
 
 <a href="https://gokcedastan.github.io/AutomataWorks/palindrome.html" rel="nofollow" >CW4 </a>
 
+<a href="https://gokcedastan.github.io/AutomataWorks/Expression.html" rel="nofollow" >CW5 </a>
+
 <a href="https://gokcedastan.github.io/AutomataWorks/HW1.html" rel="nofollow" >HW1</a>
