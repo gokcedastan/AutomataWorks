@@ -1,0 +1,15 @@
+function denklem()
+{
+i1 = document.formone.ax2.value     // ax2
+i2 = document.formone.bx.value  // bx
+i3 = document.formone.c.value   // c
+i4 = eval(i2)*eval(i2)-4*eval(i1)*eval(i3)  // diskriminant
+i5 = Math.sqrt(i4)  // karekökdiskriminant
+i6 = eval(-i2)-eval(i5)  // -b-delta
+i7 = eval(-i2)+eval(i5)  // -b+delta
+i8 = 2*eval(i1)  // 2a bölüm değeri
+i9 = eval(i6)/eval(i8) // kök 1
+i10= eval(i7)/eval(i8)  // kök 2
+document.formone.kok1.value = eval(i9)
+document.formone.kok2.value = eval(i10)
+}
