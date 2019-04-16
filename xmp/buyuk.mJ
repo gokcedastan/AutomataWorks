@@ -1,0 +1,14 @@
+buyuk() {
+  var sayi1, sayi2, buyuk;
+  println "Buyuk Sayi";
+  sayi1 = 20; sayi2 = 10; buyuk = 0;
+  if (sayi1>sayi2)   {
+    buyuk =sayi1;}
+  else
+{
+    buyuk=sayi2;
+}
+  
+    println buyuk:20;
+
+}
