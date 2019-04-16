@@ -7,7 +7,7 @@
 
 <a href="https://gokcedastan.github.io/AutomataWorks/PDA1.html" rel="nofollow" >CW6 </a>
 
-<a href="https://gokcedastan.github.io/AutomataWorks/microJ3.html" rel="nofollow" >CW7 </a>
+<a href="https://gokcedastan.github.io/AutomataWorks/microJ/microJ3.html" rel="nofollow" >CW7 </a>
 
 
 <a href="https://gokcedastan.github.io/AutomataWorks/HW1.html" rel="nofollow" >HW1</a>
