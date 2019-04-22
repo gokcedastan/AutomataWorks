@@ -104,7 +104,11 @@ class PrintItem {
       return (this.len? this.exp+":"+this.len : ""+this.exp);
    }
 }
-
+class WithValue {
+   constructor(v, e) { this.left = v; this.right = e; }
+   run() { VM.setValue(this.left, this.right); }
+   toString() { return this.left+" = "+this.right; }
+}
 //microJ1 Parser
 var met  //current Method being parsed
 var printer = ''  //current unfinished line
@@ -132,11 +136,26 @@ function identifier()  {
        error(id+" declared twice");
     met.vars.push(id); return id;
 }
+
+function withValue() {
+    let i = identifier();
+	if(tok.kind==ASSIGN) 
+	{
+	
+    match(ASSIGN); // esit oldugu zaman 
+    let f = factor();
+    return new WithValue(i,f);
+	}
+	return i;
+}
+
 function identList() {
-    let L = [];
-    L.push(identifier());
+    let L = []; 
+    L.push(withValue());
+	
     while (tok == COMMA)  {
-       match(COMMA); L.push(identifier());
+       match(COMMA);
+	   L.push(withValue()); 
     }
     return L;
 }
@@ -227,4 +246,3 @@ function printItem() {
        return new PrintItem(e1, expression());
     }
 }
-
