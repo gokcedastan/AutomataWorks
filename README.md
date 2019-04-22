@@ -1,4 +1,8 @@
 # AutomataWorks
+<a href="https://gokcedastan.github.io/AutomataWorks/CW1.png" rel="nofollow" >CW1 </a>
+
+<a href="https://gokcedastan.github.io/AutomataWorks/CW2.png" rel="nofollow" >CW2 </a>
+
 <a href="https://gokcedastan.github.io/AutomataWorks/RegExp.html" rel="nofollow" >CW3 </a>
 
 <a href="https://gokcedastan.github.io/AutomataWorks/palindrome.html" rel="nofollow" >CW4 </a>
