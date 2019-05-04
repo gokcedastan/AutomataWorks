@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang='en' class=''>
+<head>
+     <link rel="manifest" href="manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+          .register('sw.js')
+          .then((reg) => { console.log('SW Registered', reg) })
+          .catch(console.log)
+      }
+  </script>
+    <meta charset="utf-8">
+    <link rel="icon" sizes="192x192" href="myicon.png">
+    <title>Gökçe Daştan JS</title>
+  </head>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+.columns {
+    float: left;
+    width: 13.3%;
+    padding: 2px;
+}
+
+.price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+    background-color:#000;
+    color: white;
+    font-size: 25px;
+}
+
+.price li {
+    border-bottom: 1px solid #eee;
+    padding: 25px;
+    text-align: center;
+}
+
+.price .grey {
+    background-color: #eee;
+    font-size: 15px;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: inherit;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+    .columns {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center">GÖKÇE DAŞTAN</h2>
+<p style="text-align:center" style="color: darkgreen">AUTOMATA PROJECTS</p>
+<h2 style="text-align:left"><a href="https://github.com/gokcedastan/AutomataWorks/" target="_blank" >GITHUB</a></h2>
+    
+<div class="columns">
+  <ul class="price">
+    <li class="header" style="background-color:#4CAF50">Class Work 1</li>
+     <li>DFA</li>
+     <li class="grey"><a href="https://gokcedastan.github.io/AutomataWorks/CW1.png" class="button">CW1</a></li>
+      <ul class="price">
+    <h1> </h1>      
+    <li class="header" style="background-color:#4CAF50">Home Work 1:</li>
+    <li>RegExp</li>
+    <li class="grey"><a href="https://gokcedastan.github.io/AutomataWorks/HW1.html" class="button">HW1</a></li>
+  </ul>
+  </ul>
+    
+</div>
+    <div class="columns">
+    <ul class="price">
+    <li class="header" style="background-color:#4CAF50">Class Work 2</li>
+    <li>NFA and RegExp</li>
+    <li class="grey"><a href="https://gokcedastan.github.io/AutomataWorks/CW2.png" class="button">CW2</a></li>
+        <ul class="price">
+    <h1> </h1>      
+    <li class="header" style="background-color:#4CAF50">Home Work 2:</li>
+    <li>Student Database</li>
+    <li class="grey"><a href="" class="button">HW2</a></li>
+  </ul>
+  </ul>
+        
+    </div>
+    <div class="columns">
+  <ul class="price">
+    <li class="header" style="background-color:#4CAF50">Class Work 3</li>
+    <li>Regular Expression</li>
+     <li class="grey"><a href="https://gokcedastan.github.io/AutomataWorks/RegExp.html" class="button">CW3</a></li>
+      <ul class="price">
+    <h1> </h1>      
+    <li class="header" style="background-color:#4CAF50">Home Work 3:</li>
+    <li>MikroJ Parser</li>
+    <li class="grey"><a href="https://gokcedastan.github.io/AutomataWorks/microJ/microJ1.html" class="button">HW3</a></li>
+  </ul>
+      
+  </ul>
+    
+</div>
+    <div class="columns">
+  <ul class="price">
+    <li class="header" style="background-color:#4CAF50">Class Work 4</li>
+     <li>CFG</li>
+     <li class="grey"><a href="https://gokcedastan.github.io/AutomataWorks/palindrome.html" class="button">CW4</a></li>
+      <ul class="price">
+    <h1> </h1>      
+    <li class="header" style="background-color:#4CAF50">Home Work 4:</li>
+    <li>My Home Page</li>
+    <li class="grey"><a href="" class="button">HW4</a></li>
+  </ul>
+  </ul>
+    
+</div>
+     <div class="columns">
+  <ul class="price">
+       
+    <li class="header" style="background-color:#4CAF50">Class Work 5</li>
+     <li>Recursive Parser</li>
+     <li class="grey"><a href="https://gokcedastan.github.io/AutomataWorks/Expression.html" class="button">CW5</a></li>
+      <ul class="price">
+           <h1> </h1>
+           <li class="header" style="background-color:#4CAF50">Donem Odevi:</li>
+    <li>RegExp</li>
+    <li class="grey"><a href="" class="button">Proje</a></li>
+  </ul>
+  </ul>
+    
+</div>
+     <div class="columns">
+  <ul class="price">
+    <li class="header" style="background-color:#4CAF50">Class Work 6</li>
+     <li>PDA</li>
+     <li class="grey"><a href="https://gokcedastan.github.io/AutomataWorks/PDA1.html" class="button">CW6</a></li>
+      
+  </ul>
+              <h1> </h1>
+
+</div>
+     <div class="columns">
+  <ul class="price">
+    <li class="header" style="background-color:#4CAF50">Class Work 7</li>
+     <li>MIKROJ</li>
+     <li class="grey"><a href="https://gokcedastan.github.io/AutomataWorks/microJ/microJ3.html" class="button">CW7</a></li>
+   
+              <h1> </h1>
+
+  </ul>
+   
+</div>
+      <div class="columns">
+  <ul class="price">
+    <li class="header" style="background-color:#4CAF50"> Class Work 9 RegExp:</li>
+     <li>Project First Version</li>
+     <li class="grey"><a href="https://gokcedastan.github.io/AutomataWorks/regExp.html" class="button">CW9</a></li>
+      
+  </ul>
+   
+</div>
+
+
+
+</body>
+</html>
