@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Regular Expressions</title>
+<style>
+  /* pre { border: solid 1px } */
+    #pat { width: 90px; }
+    #inp { width: 250px; }
+    .found { color: red; }
+  </style>
+<style type="text/css">
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+	font-family: sans-serif;
+	margin: 40px;
+	background-image: url(https://www.mullie.eu/public/posts/regex.png);
+}
+.mainDiv {
+  width: 800px;
+  background-color:#FFF;
+  margin: 0 auto;
+  padding: 40px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.22),
+    0 1px 10px 0 rgba(0, 0, 0, 0.22),
+    0 2px 4px -1px rgba(0, 0, 0, 0.4);
+  margin-top:70px;
+  opacity:0.95;
+
+}
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+    
+}
+input {
+  border: 1px solid lightgray;
+  padding: 8px;
+  font-size: 18px;
+  width: 450px;
+  margin-top: 4px;
+}
+body,td,th {
+	color: #222;
+}
+</style>
+</head>
+
+<body>
+<div class="mainDiv">
+  <table width="600" border="0" >
+    <tr>
+      <td width="250" align="left" valign="top"><b style="font-size:19px;">REGULAR EXPRESSIONS</b><br />
+  
+
+<p>
+Pattern <input type=text id=pat onKeyUp="checkRE()">&emsp; 
+<select id=menu onChange="setValues()" width="550" >
+<option>Letter<option>Number<option>Suffix<option>x+letter<option>end with numbers<option> start and end with t
+</select> 
+</p>
+<p>
+Input <input type=text id=inp onKeyUp="checkRE()">
+</p>
+<p id=out></p>
+          <br style="clear: both;">
+ <h1 id="regex-to-dfa">What is Regex?</h1>
+
+<p>Regular expressions are used to represent the language of finite automata. Regular Expression is an expression that can be use in many programming languages and finds sections that match certain rules in numeric and string content.</p>
+          <h1 id="regex-to-dfa">Where to Use?</h1>
+
+<p>Many programming languages, operating system commands, database queries and search applications uses Regular Expression. We are going to use it on HTML inputs for specifical input type like Social ID, phone number, email, credit card number and validation date etc.</p>
+     <h1 id="regex-to-dfa">How to Use?</h1>
+
+<p>Regex is abbreviation of the Regular Expression. Regular Expression is an expression that can be use in many programming languages and finds sections that match certain rules in numeric and string content.
+          
+          </p> 
+        <div class="containerContent">
+          <div class="containerTable">
+            <table>
+              <thead>
+                <tr>
+                  <th>Token</th>
+                  <th>Description</th>
+                  <th>Sample</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>*</td>
+                  <td>Repeating 0 or more of previous token.</td>
+                  <td>a* --> ,a,aa,aaa</td>
+                </tr>
+                <tr>
+                  <td>+</td>
+                  <td>Repeating 1 or more of previous token.</td>
+                  <td>a+ --> a,aa,aaa</td>
+                </tr>
+                <tr>
+                  <td>()</td>
+                  <td>Making group.</td>
+                  <td>(aa)+ --> aa,aaaa,aaaaaa</td>
+                </tr>
+                <tr>
+                  <td>[]</td>
+                  <td>One of the characters within the specified range.</td>
+                  <td>[1-4] --> 1,2,3 or 4</td>
+                </tr>
+                <tr>
+                  <td>[^]</td>
+                  <td>Except One of the characters within the specified range.</td>
+                  <td>[^1-4] --> Except 1,2,3 and 4</td>
+                </tr>
+                <tr>
+                  <td>\s</td>
+                  <td>Space character.</td>
+                  <td>\s+ --> ,  ,   </td>
+                </tr>
+                <tr>
+                  <td>\S</td>
+                  <td>Except space character.</td>
+                  <td>\S+ --> abc,123,a1b2c3</td>
+                </tr>
+                <tr>
+                  <td>\d</td>
+                  <td>All numeric characters.</td>
+                  <td>\d+ --> 1,32,512,1024</td>
+                </tr>
+                <tr>
+                  <td>\D</td>
+                  <td>Except all numeric characters.</td>
+                  <td>\D+ --> a,bc,def,qwerty</td>
+                </tr>
+                <tr>
+                  <td>\w</td>
+                  <td>All characters used in words.</td>
+                  <td>\w+ --> Gokce</td>
+                </tr>
+                <tr>
+                  <td>{}</td>
+                  <td>Number of previous characters or groups to repeat.</td>
+                  <td>[1-4]{3} --> 111,234,134</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+
+<script>
+"use strict";
+const ptrn = ["[a-z]", "[0-9]{4}", "d[iuü][km]", "x[a-z]","[A-z]+[0-9]{1,}","t[a-z]+t"];
+const word = 
+    ["Bir iki üç dört beş altı ", "Bugün 23/6/2018 saat 14",
+     "Geldim gördüm buldum...", "Excellent expression tax ","Drop5552 of ink may 5make a million34 4think","This is a test of the JavaScript RegExp object"];
+function setValues() {
+    pat.value = ptrn[menu.selectedIndex];
+    inp.value = word[menu.selectedIndex];
+    checkRE();
+}
+function checkRE() {
+    if (pat.value && inp.value) {
+        const exp = new RegExp(pat.value,'g');
+        const str = "<span class=found>$&</span>";
+        out.innerHTML = inp.value.replace(exp, str);
+    }
+}
+    sample.innerText = setValues.toString()+"\n"+checkRE.toString();
+    title.innerText = document.title; setValues();
+</script>
