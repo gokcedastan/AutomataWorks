@@ -21,6 +21,9 @@
 
 <a href="https://gokcedastan.github.io/AutomataWorks/project.html" rel="nofollow" >HW4</a>
 
+<a href="https://gokcedastan.github.io/AutomataWorks/graph.png" rel="nofollow" >CW10 </a>
+
+
 
 
 
