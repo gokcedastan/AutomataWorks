@@ -25,6 +25,8 @@
 
 <a href="https://gokcedastan.github.io/AutomataWorks/project.html" rel="nofollow" >HW4</a>
 
+<a href="https://gokcedastan.github.io/AutomataWorks/termProject.html" rel="nofollow" >Term Project</a>
+
 
 
 
