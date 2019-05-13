@@ -19,6 +19,8 @@
 
 <a href="https://gokcedastan.github.io/AutomataWorks/HW1.html" rel="nofollow" >HW1</a>
 
+<a href="https://gokcedastan.github.io/AutomataWorks/HW2/Expression.html" rel="nofollow" >HW2</a>
+
 <a href="https://gokcedastan.github.io/AutomataWorks/microJ/microJ1.html" rel="nofollow" >HW3</a>
 
 <a href="https://gokcedastan.github.io/AutomataWorks/project.html" rel="nofollow" >HW4</a>
