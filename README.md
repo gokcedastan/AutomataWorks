@@ -27,6 +27,10 @@
 
 <a href="https://gokcedastan.github.io/AutomataWorks/termProject.html" rel="nofollow" >Term Project</a>
 
+<a href="https://gokcedastan.github.io/AutomataWorks/REPORT.pdf" rel="nofollow" >REPORT</a>
+
+
+
 
 
 
